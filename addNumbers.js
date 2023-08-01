@@ -1,6 +1,3 @@
-const addNumbers =(nums) => (
-    nums.reduce((acc, curr) => acc + curr,0)
-)
+const addNumbers = (nums) => nums.reduce((acc, curr) => acc + curr, 0)
 
-export default addNumbers
-
+module.exports = addNumbers
