@@ -14,16 +14,16 @@ app.post("/add", (req, res) => {
     !numbers ||
     !Array.isArray(numbers) ||
     numbers.length === 0 ||
-    numbers.some((number) => typeof Number(number) !== "number")
+    numbers.some((number) => typeof number !== "number")
   ) {
     return res.status(400).json({ error: "numbers missing" })
   }
 
-  const convertToNumbers = numbers.map((number) => Number(number))
-
-  const result = addNumbers(convertToNumbers)
+  const result = addNumbers(numbers)
   res.json({ result })
 })
+
+app.post("/read", (req, res) => {})
 
 const PORT = 3001
 
